@@ -1,8 +1,10 @@
 package interfaces;
+
+import java.util.ArrayList;
+
 public interface Listener<String> {
     
-    void showResult(String result);
+    void showResult(ArrayList<String> result);
     String[] getData();
-    // Integer getFirstNumber();
-    // Integer getSecondNumber();
+
 }

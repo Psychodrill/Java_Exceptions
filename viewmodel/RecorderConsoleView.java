@@ -1,11 +1,13 @@
 package viewmodel;
+import java.util.ArrayList;
+
 import interfaces.*;
 import model.Recorder;
 
 public class RecorderConsoleView implements Publisher{
 
     private final Recorder rec;
-    private String result;
+    private ArrayList<String> result;
 
     public RecorderConsoleView(Recorder rec) {
         this.rec=rec;
@@ -19,7 +21,7 @@ public class RecorderConsoleView implements Publisher{
 
     public void sendData(String[] data) {
 
-        result= rec.recordData(data);
+        result= rec.handleArrayData(data);
     }
     
 }
